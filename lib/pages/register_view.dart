@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:gp1/widgets/login_form.dart';
+import 'package:gp1/widgets/register_form.dart';
 
-class LoginView extends StatelessWidget {
-  const LoginView({super.key});
+class RegisterView extends StatelessWidget {
+  const RegisterView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Container(
           decoration: const BoxDecoration(
@@ -15,14 +16,13 @@ class LoginView extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          alignment: Alignment.center,
           child: ListView(
             children: [
               Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.1,
+                    height: MediaQuery.of(context).size.height * 0.05,
                   ),
                   Image.asset(
                     'assets/images/Untitled-1-01.png',
@@ -35,7 +35,7 @@ class LoginView extends StatelessWidget {
                 padding: EdgeInsets.all(15.0),
                 child: Center(
                   child: SingleChildScrollView(
-                    child: LoginForm(),
+                    child: RegisterForm(),
                   ),
                 ),
               ),
